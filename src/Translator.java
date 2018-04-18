@@ -16,7 +16,7 @@ public class Translator {
             } else if (response.equals("E")) {
                 translate(morseCodeMap, input, " ", new MorseParser());
             }
-            System.out.println("Enter 'Q' to quit, any other Q to continue translations");
+            System.out.println("Enter 'Q' to quit, any other key to continue translations");
             response = input.nextLine();
             if (response.equals("Q")) break;
         }
@@ -26,8 +26,8 @@ public class Translator {
         String response;
         System.out.println("Enter the sequence you wish to translate");
         response = input.nextLine();
-        String[] parsedRespinse = response.split(delimiter);
-        String translation = parser.parse(parsedRespinse, morseCodeMap);
+        String[] parsedResponse = response.split(delimiter);
+        String translation = parser.parse(parsedResponse, morseCodeMap);
         System.out.println("Here is your translation");
         System.out.println(translation);
     }
